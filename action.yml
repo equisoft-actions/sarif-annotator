@@ -6,10 +6,21 @@ branding:
   icon: check-square
 
 inputs:
-  sarif-file:
-    description: The path to the SARIF file to parse
+  level:
+    description: Include issues with this level or higher.
     required: true
+    default: error
+  limit:
+    description: Limit how many annotations are created.
+    required: true
+    default: "50"
+  sarif-path:
+    description: The path to the SARIF file to parse.
+    required: true
+  title:
+    description: Optional title for these annotations.
+    required: false
 
 runs:
   using: node16
-  main: build/dist/index.js
+  main: dist/index.js

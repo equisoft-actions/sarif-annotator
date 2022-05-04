@@ -1,0 +1,36 @@
+name: Make dist/
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**.md'
+
+jobs:
+  publish-dist:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Setup asdf-vm
+        uses: equisoft-actions/with-asdf-vm@v1
+      - name: Install NPM dependencies
+        uses: equisoft-actions/yarn-install@v1
+
+      - name: Rebuild the dist/ directory
+        run: |
+          yarn package
+          cp -fr build/dist .
+
+      - name: Commit and publish dist/
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -f dist/
+          git commit -m "chore: update dist/"
+          git push
