@@ -1,0 +1,14 @@
+{
+  "extends": "@equisoft/typescript-config/tsconfig.standards.json",
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "outDir": "../../build/action",
+    "rootDir": ".",
+    "target": "ES6"
+  },
+  "include": [
+    "**/*"
+  ]
+}

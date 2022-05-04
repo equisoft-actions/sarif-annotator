@@ -1,0 +1,12 @@
+lib/
+build/
+dist/
+
+.pnp.*
+**/.yarn/*
+!**/.yarn/releases
+!**/.yarn/plugins
+!**/.yarn/sdks
+
+.env.local
+.env.*.local

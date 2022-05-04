@@ -1,0 +1,15 @@
+name: SARIF annotator
+description: Parse SARIF files and output annotations
+author: Equisoft
+branding:
+  color: orange
+  icon: check-square
+
+inputs:
+  sarif-file:
+    description: The path to the SARIF file to parse
+    required: true
+
+runs:
+  using: node16
+  main: build/dist/index.js

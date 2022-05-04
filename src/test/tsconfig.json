@@ -1,0 +1,13 @@
+{
+  "extends": "../action/tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "..",
+    "paths": {
+      "~/*": ["../action/*"]
+    }
+  },
+  "include": [
+    "../action/**/*",
+    "../test/**/*"
+  ]
+}

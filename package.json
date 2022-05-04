@@ -1,0 +1,49 @@
+{
+  "name": "sarif-annotator",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Parse SARIF files and output annotations",
+  "main": "build/dist/main.js",
+  "scripts": {
+    "build": "tsc -p ./src/action/tsconfig.json",
+    "eslint": "./src/scripts/eslint.js",
+    "eslint:ci": "yarn eslint",
+    "package": "ncc build src/action/tsconfig.json --source-map -o build/dist --license licenses.txt",
+    "test": "NODE_ENV=test jest --config=src/test/jest.config.js",
+    "test:ci": "NODE_ENV=test yarn test --runInBand --ci",
+    "test:watch": "NODE_ENV=test yarn test --notify --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/equisoft-actions/sarif-annotator.git"
+  },
+  "author": "Equisoft",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "1.7.0",
+    "@actions/github": "5.0.1",
+    "@actions/io": "1.1.2"
+  },
+  "devDependencies": {
+    "@equisoft/eslint-config-typescript": "2.0.2",
+    "@equisoft/typescript-config": "2.0.0",
+    "@microsoft/eslint-formatter-sarif": "2.1.7",
+    "@types/jest": "26.0.24",
+    "@types/node": "16.11.7",
+    "@types/sarif": "2.1.4",
+    "@typescript-eslint/eslint-plugin": "5.20.0",
+    "@typescript-eslint/parser": "5.20.0",
+    "@vercel/ncc": "^0.31.1",
+    "eslint": "8.13.0",
+    "eslint-import-resolver-node": "0.3.6",
+    "eslint-import-resolver-typescript": "2.7.1",
+    "eslint-plugin-import": "2.26.0",
+    "jest": "28.0.3",
+    "jest-extended": "2.0.0",
+    "jest-junit": "13.2.0",
+    "ts-jest": "28.0.1",
+    "typescript": "4.6.4",
+    "yargs": "17.4.1"
+  },
+  "packageManager": "yarn@3.2.0"
+}

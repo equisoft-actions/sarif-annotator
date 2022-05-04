@@ -1,0 +1,66 @@
+name: Validate
+
+on:
+  pull_request: { }
+  push:
+    branches:
+      - main
+    tags:
+      - v*.*.*
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup asdf-vm
+        uses: equisoft-actions/with-asdf-vm@v1
+      - name: Install NPM dependencies
+        uses: equisoft-actions/yarn-install@v1
+
+  eslint:
+    name: ESLint
+    runs-on: ubuntu-latest
+    needs:
+      - setup
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup asdf-vm
+        uses: equisoft-actions/with-asdf-vm@v1
+      - name: Install NPM dependencies
+        uses: equisoft-actions/yarn-install@v1
+      - name: Run ESLint
+        uses: equisoft-actions/yarn-eslint@v1
+
+  unit_tests:
+    name: Unit tests
+    runs-on: ubuntu-latest
+    needs:
+      - setup
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup asdf-vm
+        uses: equisoft-actions/with-asdf-vm@v1
+      - name: Install NPM dependencies
+        uses: equisoft-actions/yarn-install@v1
+      - name: Run Jest
+        uses: equisoft-actions/yarn-jest@v1
+
+  compile:
+    name: Compile
+    runs-on: ubuntu-latest
+    needs:
+      - setup
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup asdf-vm
+        uses: equisoft-actions/with-asdf-vm@v1
+      - name: Install NPM dependencies
+        uses: equisoft-actions/yarn-install@v1
+      - name: Compile
+        working-directory: ${{ inputs.working-directory }}
+        run: yarn build

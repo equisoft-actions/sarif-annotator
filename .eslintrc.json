@@ -1,0 +1,48 @@
+{
+  "extends": [
+    "@equisoft/eslint-config-typescript",
+    "plugin:import/typescript"
+  ],
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "/*.js",
+          "src/test/**/*",
+          "src/scripts/**/*",
+          "**/*.test.{js,jsx,ts,tsx}",
+          "**/*.spec.{js,jsx,ts,tsx}"
+        ]
+      }
+    ],
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off"
+  },
+  "overrides": [
+    {
+      "files": [
+        "src/test/**/*"
+      ],
+      "rules": {
+        "import/no-unresolved": [
+          "error",
+          {
+            "ignore": [
+              "^~/"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "src/scripts/**/*"
+      ],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off",
+        "no-console": "off"
+      }
+    }
+  ]
+}
