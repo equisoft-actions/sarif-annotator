@@ -33,7 +33,7 @@
     "@types/sarif": "2.1.4",
     "@typescript-eslint/eslint-plugin": "5.20.0",
     "@typescript-eslint/parser": "5.20.0",
-    "@vercel/ncc": "^0.31.1",
+    "@vercel/ncc": "0.31.1",
     "eslint": "8.13.0",
     "eslint-import-resolver-node": "0.3.6",
     "eslint-import-resolver-typescript": "2.7.1",
