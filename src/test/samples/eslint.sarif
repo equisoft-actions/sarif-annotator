@@ -1,0 +1,502 @@
+{
+  "version": "2.1.0",
+  "$schema": "http://json.schemastore.org/sarif-2.1.0-rtm.5",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "ESLint",
+          "informationUri": "https://eslint.org",
+          "rules": [
+            {
+              "id": "import/order",
+              "helpUri": "https://github.com/import-js/eslint-plugin-import/blob/v2.26.0/docs/rules/order.md",
+              "properties": {}
+            },
+            {
+              "id": "object-curly-spacing",
+              "helpUri": "https://eslint.org/docs/rules/object-curly-spacing",
+              "properties": {},
+              "shortDescription": {
+                "text": "enforce consistent spacing inside braces"
+              }
+            },
+            {
+              "id": "@typescript-eslint/no-unused-vars",
+              "helpUri": "https://typescript-eslint.io/rules/no-unused-vars",
+              "properties": {},
+              "shortDescription": {
+                "text": "Disallow unused variables"
+              }
+            },
+            {
+              "id": "semi",
+              "helpUri": "https://eslint.org/docs/rules/semi",
+              "properties": {},
+              "shortDescription": {
+                "text": "require or disallow semicolons instead of ASI"
+              }
+            },
+            {
+              "id": "no-multiple-empty-lines",
+              "helpUri": "https://eslint.org/docs/rules/no-multiple-empty-lines",
+              "properties": {},
+              "shortDescription": {
+                "text": "disallow multiple empty lines"
+              }
+            },
+            {
+              "id": "prefer-const",
+              "helpUri": "https://eslint.org/docs/rules/prefer-const",
+              "properties": {},
+              "shortDescription": {
+                "text": "require `const` declarations for variables that are never reassigned after declared"
+              }
+            },
+            {
+              "id": "padded-blocks",
+              "helpUri": "https://eslint.org/docs/rules/padded-blocks",
+              "properties": {},
+              "shortDescription": {
+                "text": "require or disallow padding within blocks"
+              }
+            },
+            {
+              "id": "import/no-unresolved",
+              "helpUri": "https://github.com/import-js/eslint-plugin-import/blob/v2.26.0/docs/rules/no-unresolved.md",
+              "properties": {}
+            },
+            {
+              "id": "@typescript-eslint/no-var-requires",
+              "helpUri": "https://typescript-eslint.io/rules/no-var-requires",
+              "properties": {},
+              "shortDescription": {
+                "text": "Disallows the use of require statements except in import statements"
+              }
+            },
+            {
+              "id": "@typescript-eslint/no-empty-function",
+              "helpUri": "https://typescript-eslint.io/rules/no-empty-function",
+              "properties": {},
+              "shortDescription": {
+                "text": "Disallow empty functions"
+              }
+            }
+          ],
+          "version": "8.14.0"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///home/computer/code/kronos/ci/sarif-annotator/src/main/index.ts"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///home/computer/code/kronos/ci/sarif-annotator/src/main/model.ts"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///home/computer/code/kronos/ci/sarif-annotator/src/main/parser.ts"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///home/computer/code/kronos/ci/sarif-annotator/src/scripts/eslint.js"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///home/computer/code/kronos/ci/sarif-annotator/src/test/index.spec.ts"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///home/computer/code/kronos/ci/sarif-annotator/src/test/jest.config.js"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///home/computer/code/kronos/ci/sarif-annotator/src/test/parser.spec.ts"
+          }
+        }
+      ],
+      "results": [
+        {
+          "level": "error",
+          "message": {
+            "text": "`@actions/github` import should occur before import of `./model`"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///home/computer/code/kronos/ci/sarif-annotator/src/main/index.ts",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 1,
+                  "endLine": 4,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "ruleId": "import/order",
+          "ruleIndex": 0
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "A space is required after '{'."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///home/computer/code/kronos/ci/sarif-annotator/src/main/index.ts",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 8,
+                  "endLine": 4,
+                  "endColumn": 9
+                }
+              }
+            }
+          ],
+          "ruleId": "object-curly-spacing",
+          "ruleIndex": 1
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "'context' is defined but never used."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///home/computer/code/kronos/ci/sarif-annotator/src/main/index.ts",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 9,
+                  "endLine": 4,
+                  "endColumn": 16
+                }
+              }
+            }
+          ],
+          "ruleId": "@typescript-eslint/no-unused-vars",
+          "ruleIndex": 2
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "A space is required before '}'."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///home/computer/code/kronos/ci/sarif-annotator/src/main/index.ts",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 16,
+                  "endLine": 4,
+                  "endColumn": 17
+                }
+              }
+            }
+          ],
+          "ruleId": "object-curly-spacing",
+          "ruleIndex": 1
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "Missing semicolon."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///home/computer/code/kronos/ci/sarif-annotator/src/main/index.ts",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 40,
+                  "endLine": 5,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "ruleId": "semi",
+          "ruleIndex": 3
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "More than 1 blank line not allowed."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///home/computer/code/kronos/ci/sarif-annotator/src/main/index.ts",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 1,
+                  "endLine": 7,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "ruleId": "no-multiple-empty-lines",
+          "ruleIndex": 4
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "'issues' is assigned a value but never used."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///home/computer/code/kronos/ci/sarif-annotator/src/main/index.ts",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 9,
+                  "endLine": 10,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "ruleId": "@typescript-eslint/no-unused-vars",
+          "ruleIndex": 2
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "'issues' is never reassigned. Use 'const' instead."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///home/computer/code/kronos/ci/sarif-annotator/src/main/index.ts",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 9,
+                  "endLine": 10,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "ruleId": "prefer-const",
+          "ruleIndex": 5
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "Block must not be padded by blank lines."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///home/computer/code/kronos/ci/sarif-annotator/src/main/index.ts",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 52,
+                  "endLine": 12,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "ruleId": "padded-blocks",
+          "ruleIndex": 6
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "Unable to resolve path to module 'sarif'."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///home/computer/code/kronos/ci/sarif-annotator/src/main/parser.ts",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 21,
+                  "endLine": 3,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "ruleId": "import/no-unresolved",
+          "ruleIndex": 7
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "'sarif' is assigned a value but never used."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///home/computer/code/kronos/ci/sarif-annotator/src/main/parser.ts",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 9,
+                  "endLine": 12,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "ruleId": "@typescript-eslint/no-unused-vars",
+          "ruleIndex": 2
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "'sarif' is never reassigned. Use 'const' instead."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///home/computer/code/kronos/ci/sarif-annotator/src/main/parser.ts",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 9,
+                  "endLine": 12,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "ruleId": "prefer-const",
+          "ruleIndex": 5
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "Require statement not part of import statement."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///home/computer/code/kronos/ci/sarif-annotator/src/test/jest.config.js",
+                  "index": 5
+                },
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 37,
+                  "endLine": 2,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "ruleId": "@typescript-eslint/no-var-requires",
+          "ruleIndex": 8,
+          "suppressions": [
+            {
+              "kind": "inSource",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "Require statement not part of import statement."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///home/computer/code/kronos/ci/sarif-annotator/src/test/jest.config.js",
+                  "index": 5
+                },
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 29,
+                  "endLine": 3,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "ruleId": "@typescript-eslint/no-var-requires",
+          "ruleIndex": 8,
+          "suppressions": [
+            {
+              "kind": "inSource",
+              "justification": ""
+            }
+          ]
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "Unexpected empty arrow function."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///home/computer/code/kronos/ci/sarif-annotator/src/test/parser.spec.ts",
+                  "index": 6
+                },
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 44,
+                  "endLine": 4,
+                  "endColumn": 6
+                }
+              }
+            }
+          ],
+          "ruleId": "@typescript-eslint/no-empty-function",
+          "ruleIndex": 9
+        }
+      ]
+    }
+  ]
+}

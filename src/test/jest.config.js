@@ -9,7 +9,7 @@ const config = {
     errorOnDeprecated: true,
     globals: {
         'ts-jest': {
-            tsconfig: 'src/test/tsconfig.json',
+            tsconfig: '<rootDir>/src/test/tsconfig.json',
         },
     },
     moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths || [], { prefix: '<rootDir>/src/test' }),
@@ -29,7 +29,7 @@ const config = {
     resetMocks: true,
     rootDir: '../../',
     roots: [
-        '<rootDir>/src/action',
+        '<rootDir>/src/main',
         '<rootDir>/src/test',
     ],
     setupFilesAfterEnv: [
@@ -37,7 +37,7 @@ const config = {
     ],
 
     collectCoverage: true,
-    collectCoverageFrom: ['<rootDir>/src/action/**/*.{js,ts}'],
+    collectCoverageFrom: ['<rootDir>/src/main/**.{js,ts}'],
     coverageDirectory: 'build/jest/coverage',
     coveragePathIgnorePatterns: [
         '/index\\.[jt]s?$',
