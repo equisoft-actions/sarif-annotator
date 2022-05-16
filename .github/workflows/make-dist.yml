@@ -14,22 +14,26 @@ concurrency:
 jobs:
   publish-dist:
     runs-on: ubuntu-latest
+    environment: dist-branch
 
     steps:
       - name: Checkout
         uses: actions/checkout@v3
         with:
+          fetch-depth: 0
           ref: ${{ github.ref_name }}
+          ssh-key: |
+            ${{ secrets.DIST_PRIVATE_KEY }}
+
       - name: Setup asdf-vm
         uses: equisoft-actions/with-asdf-vm@v1
       - name: Install NPM dependencies
         uses: equisoft-actions/yarn-install@v1
 
       - name: Update the dist branch
-        run:
-          git clean -fxd
-          git checkout dist
-          git reset --hard ${{ github.ref_name }}
+        run: |
+          git checkout --force -B dist refs/remotes/origin/dist
+          git rebase ${{ github.ref_name }}
 
       - name: Rebuild the dist/ directory
         run: |
