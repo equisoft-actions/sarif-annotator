@@ -7,6 +7,10 @@ on:
     paths-ignore:
       - '**.md'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   publish-dist:
     runs-on: ubuntu-latest
@@ -15,11 +19,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          ref: ${{ github.head_ref }}
+          ref: ${{ github.ref_name }}
       - name: Setup asdf-vm
         uses: equisoft-actions/with-asdf-vm@v1
       - name: Install NPM dependencies
         uses: equisoft-actions/yarn-install@v1
+
+      - name: Update the dist branch
+        run:
+          git clean -fxd
+          git checkout dist
+          git reset --hard ${{ github.ref_name }}
 
       - name: Rebuild the dist/ directory
         run: |
@@ -32,5 +42,5 @@ jobs:
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add -f dist/
-          git commit -m "chore: update dist/"
-          git push
+          git commit -m "build: update dist/ from ${{ github.sha }}"
+          git push --force
