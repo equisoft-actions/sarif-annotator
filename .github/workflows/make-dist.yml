@@ -32,19 +32,19 @@ jobs:
 
       - name: Update the dist branch
         run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git checkout --force -B dist refs/remotes/origin/dist
-          git rebase ${{ github.ref_name }}
+          git merge ${{ github.ref_name }}
 
       - name: Rebuild the dist/ directory
         run: |
           yarn package
           cp -fr build/dist .
 
-      - name: Commit and publish dist/
+      - name: Publish dist/
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
           git add -f dist/
-          git commit -m "build: update dist/ from ${{ github.sha }}"
+          git diff-index --quiet HEAD || git commit -m "build: update dist/ from ${{ github.sha }}"
           git push --force
