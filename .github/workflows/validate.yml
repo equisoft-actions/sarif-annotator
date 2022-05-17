@@ -33,7 +33,7 @@ jobs:
       - name: Install NPM dependencies
         uses: equisoft-actions/yarn-install@v1
       - name: Run ESLint
-        uses: equisoft-actions/yarn-eslint@v1
+        uses: equisoft-actions/yarn-eslint@v2
         with:
           enable-annotations: false
 
