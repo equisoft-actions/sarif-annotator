@@ -428,32 +428,38 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@equisoft/eslint-config-typescript@npm:2.0.2":
-  version: 2.0.2
-  resolution: "@equisoft/eslint-config-typescript@npm:2.0.2"
+"@equisoft/eslint-config-typescript@npm:3.0.1":
+  version: 3.0.1
+  resolution: "@equisoft/eslint-config-typescript@npm:3.0.1"
   dependencies:
-    "@equisoft/eslint-config": 2.0.2
+    "@equisoft/eslint-config": 3.0.1
   peerDependencies:
-    "@typescript-eslint/eslint-plugin": ^4.6.0
-    "@typescript-eslint/parser": ^4.6.0
-    eslint: ^7.9.0
-    eslint-import-resolver-node: ^0.3.4
-    eslint-import-resolver-typescript: ^2.3.0
-    eslint-plugin-import: ^2.22.0
-  checksum: 4324e36f5d38ba0138ac6412c6a809df0f7ee41851403f287d36e55a3b6da046034f1f4e19b846948957a1b2d5cecd12e1c856aa5226c768ee78b434b6d0e420
+    "@microsoft/eslint-formatter-sarif": ^3
+    "@typescript-eslint/eslint-plugin": ^5
+    "@typescript-eslint/parser": ^5
+    eslint: ^8
+    eslint-import-resolver-node: ^0.3
+    eslint-import-resolver-typescript: ^2
+    eslint-plugin-import: ^2
+    yargs: ^17
+  checksum: ad8a14d0552bc60c590fa65bd05a3753f84903361f4f7a1088980be500e70e9217281104fe8b00efd989f2daf8308e10c365eab158ee679e76dd348877affe83
   languageName: node
   linkType: hard
 
-"@equisoft/eslint-config@npm:2.0.2":
-  version: 2.0.2
-  resolution: "@equisoft/eslint-config@npm:2.0.2"
+"@equisoft/eslint-config@npm:3.0.1":
+  version: 3.0.1
+  resolution: "@equisoft/eslint-config@npm:3.0.1"
   dependencies:
-    eslint-config-airbnb-base: ^14.2.0
+    eslint-config-airbnb-base: ^15.0.0
   peerDependencies:
-    eslint: ^7.9.0
-    eslint-import-resolver-node: ^0.3.4
-    eslint-plugin-import: ^2.22.0
-  checksum: 3c979a1ceb1b0bfe4321d2954c86a31087efdd00dbb9968173f1b42d495501d411d78c3487e924d76ed5199b6a398ef38017dcf0eb6c6f79ec221f94c0730b3e
+    "@microsoft/eslint-formatter-sarif": ^3
+    eslint: ^8
+    eslint-import-resolver-node: ^0.3
+    eslint-plugin-import: ^2
+    yargs: ^17
+  bin:
+    eslint: eslint.js
+  checksum: 0b41372dfe621998983ea6bcea2d2b06c8cd1bb2eff90c99bcd2210fbd662698a4505e884f11e03f17d9e3f3299c033da22f086c9ce24a73525b8884768e7367
   languageName: node
   linkType: hard
 
@@ -2103,17 +2109,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-airbnb-base@npm:^14.2.0":
-  version: 14.2.1
-  resolution: "eslint-config-airbnb-base@npm:14.2.1"
+"eslint-config-airbnb-base@npm:^15.0.0":
+  version: 15.0.0
+  resolution: "eslint-config-airbnb-base@npm:15.0.0"
   dependencies:
     confusing-browser-globals: ^1.0.10
     object.assign: ^4.1.2
-    object.entries: ^1.1.2
+    object.entries: ^1.1.5
+    semver: ^6.3.0
   peerDependencies:
-    eslint: ^5.16.0 || ^6.8.0 || ^7.2.0
-    eslint-plugin-import: ^2.22.1
-  checksum: 858bea748a3c8685b52fcf2488e6a0b964022f8387f4ee1e69cb707d4fda2a409f09eb8eea658bcd83fae3519967d10208ba7576dd3d3202b8cf0b9d1a6e21eb
+    eslint: ^7.32.0 || ^8.2.0
+    eslint-plugin-import: ^2.25.2
+  checksum: 38626bad2ce2859fccac86b30cd2b86c9b7d8d71d458331860861dc05290a5b198bded2f4fb89efcb9046ec48f8ab4c4fb00365ba8916f27b172671da28b93ea
   languageName: node
   linkType: hard
 
@@ -4102,7 +4109,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"object.entries@npm:^1.1.2":
+"object.entries@npm:^1.1.5":
   version: 1.1.5
   resolution: "object.entries@npm:1.1.5"
   dependencies:
@@ -4536,7 +4543,7 @@ __metadata:
     "@actions/core": 1.8.2
     "@actions/github": 5.0.3
     "@actions/io": 1.1.2
-    "@equisoft/eslint-config-typescript": 2.0.2
+    "@equisoft/eslint-config-typescript": 3.0.1
     "@equisoft/typescript-config": 2.0.0
     "@microsoft/eslint-formatter-sarif": 3.0.0
     "@types/jest": 27.5.1
