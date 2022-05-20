@@ -33,17 +33,9 @@ jobs:
       - name: Install NPM dependencies
         uses: equisoft-actions/yarn-install@v1
       - name: Run ESLint
-        uses: equisoft-actions/yarn-eslint@v1
+        uses: equisoft-actions/yarn-eslint@v2
         with:
           enable-annotations: false
-
-      - name: Upload eslint sarif
-        uses: actions/upload-artifact@v3
-        if: "!cancelled()"
-        with:
-          name: eslint.sarif
-          path: build/eslint/report.sarif
-          retention-days: 1
 
   unit-tests:
     name: Unit tests
