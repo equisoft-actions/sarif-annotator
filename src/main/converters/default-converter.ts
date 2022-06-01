@@ -31,7 +31,9 @@ export class DefaultConverter implements Converter {
         const physicalLocation = result.locations?.[0]?.physicalLocation;
         const file = physicalLocation && this.extractFile(physicalLocation, run.artifacts || []);
         const message = this.extractMessage(result);
-        if (!file || !message) {
+        const level: IssueLevel = LEVEL_MAP.get(result.level) || 'notice';
+
+        if (!file || !message || this.isSuppressed(result)) {
             return undefined;
         }
 
@@ -43,11 +45,11 @@ export class DefaultConverter implements Converter {
             endColumn: physicalLocation?.region?.endColumn,
         };
 
-        return {
-            location,
-            message,
-            level: LEVEL_MAP.get(result.level) || 'notice',
-        };
+        return { location, message, level };
+    }
+
+    private isSuppressed(result: Result): boolean | undefined {
+        return result.suppressions?.some((it) => it.status == null || it.status === 'accepted');
     }
 
     private extractFile(physicalLocation: PhysicalLocation, artifacts: Artifact[]): string | undefined {

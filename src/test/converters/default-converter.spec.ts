@@ -1,4 +1,4 @@
-import { Location, Message, Run, Tool } from 'sarif';
+import { Location, Message, Run, Suppression, Tool } from 'sarif';
 import { DefaultConverter } from '~/converters/default-converter';
 import { Report } from '~/model/report';
 
@@ -16,6 +16,45 @@ describe('DefaultConverter', () => {
 
     beforeEach(() => {
         converter = new DefaultConverter(rootDirectory);
+    });
+
+    describe('Suppressions', () => {
+        function givenRunWithASuppressedResult(status: Suppression.status | undefined): Run {
+            return {
+                tool: A_TOOL,
+                results: [
+                    {
+                        message: A_MESSAGE,
+                        locations: A_VALID_LOCATION,
+                        suppressions: [{ status, kind: 'inSource' }],
+                    },
+                ],
+            };
+        }
+
+        it('should skip results with undefined suppressions', () => {
+            const run: Run = givenRunWithASuppressedResult(undefined);
+
+            const report: Report = converter.createReport(run);
+
+            expect(report.issues.length).toBe(0);
+        });
+
+        it('should skip results with accepted suppressions', () => {
+            const run: Run = givenRunWithASuppressedResult('accepted');
+
+            const report: Report = converter.createReport(run);
+
+            expect(report.issues.length).toBe(0);
+        });
+
+        it('should accept results with rejected suppressions', () => {
+            const run: Run = givenRunWithASuppressedResult('rejected');
+
+            const report: Report = converter.createReport(run);
+
+            expect(report.issues.length).toBe(1);
+        });
     });
 
     describe('Message mapping', () => {
