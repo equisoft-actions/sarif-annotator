@@ -2042,7 +2042,8 @@ class DefaultConverter {
         const physicalLocation = (_b = (_a = result.locations) === null || _a === void 0 ? void 0 : _a[0]) === null || _b === void 0 ? void 0 : _b.physicalLocation;
         const file = physicalLocation && this.extractFile(physicalLocation, run.artifacts || []);
         const message = this.extractMessage(result);
-        if (!file || !message) {
+        const level = LEVEL_MAP.get(result.level) || 'notice';
+        if (!file || !message || this.isSuppressed(result)) {
             return undefined;
         }
         const location = {
@@ -2052,11 +2053,11 @@ class DefaultConverter {
             column: (_e = physicalLocation === null || physicalLocation === void 0 ? void 0 : physicalLocation.region) === null || _e === void 0 ? void 0 : _e.startColumn,
             endColumn: (_f = physicalLocation === null || physicalLocation === void 0 ? void 0 : physicalLocation.region) === null || _f === void 0 ? void 0 : _f.endColumn,
         };
-        return {
-            location,
-            message,
-            level: LEVEL_MAP.get(result.level) || 'notice',
-        };
+        return { location, message, level };
+    }
+    isSuppressed(result) {
+        var _a;
+        return (_a = result.suppressions) === null || _a === void 0 ? void 0 : _a.some((it) => it.status == null || it.status === 'accepted');
     }
     extractFile(physicalLocation, artifacts) {
         var _a, _b;
