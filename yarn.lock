@@ -2073,7 +2073,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"enhanced-resolve@npm:^5.9.3":
+"enhanced-resolve@npm:^5.10.0":
   version: 5.10.0
   resolution: "enhanced-resolve@npm:5.10.0"
   dependencies:
@@ -2207,13 +2207,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-import-resolver-typescript@npm:3.1.1":
-  version: 3.1.1
-  resolution: "eslint-import-resolver-typescript@npm:3.1.1"
+"eslint-import-resolver-typescript@npm:3.1.4":
+  version: 3.1.4
+  resolution: "eslint-import-resolver-typescript@npm:3.1.4"
   dependencies:
     debug: ^4.3.4
-    enhanced-resolve: ^5.9.3
-    get-tsconfig: ^4.0.6
+    enhanced-resolve: ^5.10.0
+    get-tsconfig: ^4.1.0
     globby: ^13.1.2
     is-core-module: ^2.9.0
     is-glob: ^4.0.3
@@ -2221,7 +2221,7 @@ __metadata:
   peerDependencies:
     eslint: "*"
     eslint-plugin-import: "*"
-  checksum: 83a9a8edffebb2a0b8445117750da54669257ab23faa368cfcd91249e529afd059b5ec0f04abb5b232ede08c2a9fbcd1bf53a3eaf7b557d9e217724cd92b7e75
+  checksum: 89580b0dc524d1543cd2d2d9f9da4d400d1c4e8fb3358a5656d30c5d55d9693153e8e01a6b1a35a8f9a4ed6012159771f651c59d2330c7d52284007ae13aadfe
   languageName: node
   linkType: hard
 
@@ -2710,7 +2710,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"get-tsconfig@npm:^4.0.6":
+"get-tsconfig@npm:^4.1.0":
   version: 4.1.0
   resolution: "get-tsconfig@npm:4.1.0"
   checksum: a1a29cdf53609a1e9e111bf863ea209494c03e425964ed2603e3a2657ed1d38213d4a8e3efbfd945f2ec908fe99b76d3ee87422fac5d8ec4fdd858bbb502efbf
@@ -4749,7 +4749,7 @@ __metadata:
     "@vercel/ncc": 0.34.0
     eslint: 8.17.0
     eslint-import-resolver-node: 0.3.6
-    eslint-import-resolver-typescript: 3.1.1
+    eslint-import-resolver-typescript: 3.1.4
     eslint-plugin-import: 2.26.0
     jest: 28.1.2
     jest-extended: 2.0.0
