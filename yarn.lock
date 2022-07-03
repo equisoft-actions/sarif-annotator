@@ -2207,9 +2207,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-import-resolver-typescript@npm:3.1.4":
-  version: 3.1.4
-  resolution: "eslint-import-resolver-typescript@npm:3.1.4"
+"eslint-import-resolver-typescript@npm:3.2.0":
+  version: 3.2.0
+  resolution: "eslint-import-resolver-typescript@npm:3.2.0"
   dependencies:
     debug: ^4.3.4
     enhanced-resolve: ^5.10.0
@@ -2221,7 +2221,7 @@ __metadata:
   peerDependencies:
     eslint: "*"
     eslint-plugin-import: "*"
-  checksum: 89580b0dc524d1543cd2d2d9f9da4d400d1c4e8fb3358a5656d30c5d55d9693153e8e01a6b1a35a8f9a4ed6012159771f651c59d2330c7d52284007ae13aadfe
+  checksum: 7facccbaec92b7d1012d4dfdca2316f69d785e494b5b8808fe2405acff91b88644917811d811bd3cf392222869f8fdc4e66055bf708cc4a8f49d5e641b39b351
   languageName: node
   linkType: hard
 
@@ -4749,7 +4749,7 @@ __metadata:
     "@vercel/ncc": 0.34.0
     eslint: 8.17.0
     eslint-import-resolver-node: 0.3.6
-    eslint-import-resolver-typescript: 3.1.4
+    eslint-import-resolver-typescript: 3.2.0
     eslint-plugin-import: 2.26.0
     jest: 28.1.2
     jest-extended: 2.0.0
