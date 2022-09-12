@@ -1,16 +1,16 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { pathsToModuleNameMapper } = require('ts-jest');
-const { compilerOptions } = require('./tsconfig.json');
+const { compilerOptions } = require('./tsconfig');
 
+/** @type {import('ts-jest').InitialOptionsTsJest} */
 const config = {
-    preset: 'ts-jest',
-
     clearMocks: true,
     errorOnDeprecated: true,
-    globals: {
-        'ts-jest': {
-            tsconfig: '<rootDir>/src/test/tsconfig.json',
-        },
+    transform: {
+        '^.+\\.tsx?$': [
+            'ts-jest',
+            { tsconfig: '<rootDir>/src/test/tsconfig.json' },
+        ],
     },
     moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths || [], { prefix: '<rootDir>/src/test' }),
     reporters: [
