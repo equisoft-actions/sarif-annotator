@@ -21,7 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "1.9.1",
-    "@actions/github": "5.0.3",
+    "@actions/github": "5.1.0",
     "@actions/io": "1.1.2"
   },
   "devDependencies": {
@@ -31,10 +31,10 @@
     "@types/jest": "29.0.3",
     "@types/node": "16.11.60",
     "@types/sarif": "2.1.4",
-    "@typescript-eslint/eslint-plugin": "5.37.0",
-    "@typescript-eslint/parser": "5.37.0",
+    "@typescript-eslint/eslint-plugin": "5.38.0",
+    "@typescript-eslint/parser": "5.38.0",
     "@vercel/ncc": "0.34.0",
-    "eslint": "8.23.1",
+    "eslint": "8.24.0",
     "eslint-import-resolver-node": "0.3.6",
     "eslint-import-resolver-typescript": "3.5.1",
     "eslint-plugin-import": "2.26.0",
