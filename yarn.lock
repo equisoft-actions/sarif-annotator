@@ -1223,10 +1223,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:16.18.12":
-  version: 16.18.12
-  resolution: "@types/node@npm:16.18.12"
-  checksum: fc3271182414f8593018ef8f00b4718116a92f463f619081bd399d9460e7861e1dd7eebc7cf94c23567e418ff397babed077011711aae8d47171b5a81c5bd71d
+"@types/node@npm:18.14.1":
+  version: 18.14.1
+  resolution: "@types/node@npm:18.14.1"
+  checksum: 58556bbdb0050e44a4934742c1da2530812782c06d266a758e669e44c5aa196166c5fce45fdb03f016876717e3840478b3220129bb77367f979607564047f0a3
   languageName: node
   linkType: hard
 
@@ -5025,7 +5025,7 @@ __metadata:
     "@equisoft/typescript-config": 2.0.0
     "@microsoft/eslint-formatter-sarif": 3.0.0
     "@types/jest": 29.2.0
-    "@types/node": 16.18.12
+    "@types/node": 18.14.1
     "@types/sarif": 2.1.4
     "@typescript-eslint/eslint-plugin": 5.41.0
     "@typescript-eslint/parser": 5.41.0
