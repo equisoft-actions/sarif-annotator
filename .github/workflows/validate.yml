@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup asdf-vm
-        uses: equisoft-actions/with-asdf-vm@v1
+        uses: equisoft-actions/with-asdf-vm@v2
       - name: Install NPM dependencies
         uses: equisoft-actions/yarn-install@v1
 
@@ -29,7 +29,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup asdf-vm
-        uses: equisoft-actions/with-asdf-vm@v1
+        uses: equisoft-actions/with-asdf-vm@v2
       - name: Install NPM dependencies
         uses: equisoft-actions/yarn-install@v1
       - name: Run ESLint
@@ -46,7 +46,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup asdf-vm
-        uses: equisoft-actions/with-asdf-vm@v1
+        uses: equisoft-actions/with-asdf-vm@v2
       - name: Install NPM dependencies
         uses: equisoft-actions/yarn-install@v1
       - name: Run Jest
@@ -61,7 +61,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup asdf-vm
-        uses: equisoft-actions/with-asdf-vm@v1
+        uses: equisoft-actions/with-asdf-vm@v2
       - name: Install NPM dependencies
         uses: equisoft-actions/yarn-install@v1
       - name: Compile

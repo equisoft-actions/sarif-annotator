@@ -26,7 +26,7 @@ jobs:
             ${{ secrets.DIST_PRIVATE_KEY }}
 
       - name: Setup asdf-vm
-        uses: equisoft-actions/with-asdf-vm@v1
+        uses: equisoft-actions/with-asdf-vm@v2
       - name: Install NPM dependencies
         uses: equisoft-actions/yarn-install@v1
 
