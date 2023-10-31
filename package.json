@@ -28,7 +28,7 @@
     "@equisoft/eslint-config-typescript": "3.0.3",
     "@equisoft/typescript-config": "2.0.0",
     "@microsoft/eslint-formatter-sarif": "3.0.0",
-    "@types/jest": "29.5.6",
+    "@types/jest": "29.5.7",
     "@types/node": "20.8.9",
     "@types/sarif": "2.1.6",
     "@typescript-eslint/eslint-plugin": "5.62.0",
