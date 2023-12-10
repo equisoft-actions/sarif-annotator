@@ -1150,13 +1150,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:29.5.10":
-  version: 29.5.10
-  resolution: "@types/jest@npm:29.5.10"
+"@types/jest@npm:29.5.11":
+  version: 29.5.11
+  resolution: "@types/jest@npm:29.5.11"
   dependencies:
     expect: ^29.0.0
     pretty-format: ^29.0.0
-  checksum: ef385905787db528de9b6beb2688865c0bb276e64256ed60b9a1a6ffc0b75737456cb5e27e952a3241c5845b6a1da487470010dd30f3ca59c8581624c564a823
+  checksum: f892a06ec9f0afa9a61cd7fa316ec614e21d4df1ad301b5a837787e046fcb40dfdf7f264a55e813ac6b9b633cb9d366bd5b8d1cea725e84102477b366df23fdd
   languageName: node
   linkType: hard
 
@@ -1174,12 +1174,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:20.10.3":
+"@types/node@npm:*":
   version: 20.10.3
   resolution: "@types/node@npm:20.10.3"
   dependencies:
     undici-types: ~5.26.4
   checksum: 34a329494f0ea239af05eeb6f00f396963725b3eb9a2f79c5e6a6d37e823f2ab85e1079c2ee56723a37d8b89e7bbe2bd050c97144e5bb06dab93fd1cace65c97
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:20.10.4":
+  version: 20.10.4
+  resolution: "@types/node@npm:20.10.4"
+  dependencies:
+    undici-types: ~5.26.4
+  checksum: 054b296417e771ab524bea63cf3289559c6bdf290d45428f7cc68e9b00030ff7a0ece47b8c99a26b4f47a443919813bcf42beadff2f0bea7d8125fa541d92eb0
   languageName: node
   linkType: hard
 
@@ -4802,8 +4811,8 @@ __metadata:
     "@equisoft/eslint-config-typescript": 3.0.3
     "@equisoft/typescript-config": 2.0.0
     "@microsoft/eslint-formatter-sarif": 3.0.0
-    "@types/jest": 29.5.10
-    "@types/node": 20.10.3
+    "@types/jest": 29.5.11
+    "@types/node": 20.10.4
     "@types/sarif": 2.1.7
     "@typescript-eslint/eslint-plugin": 5.62.0
     "@typescript-eslint/parser": 5.62.0
@@ -4817,7 +4826,7 @@ __metadata:
     jest-junit: 16.0.0
     ts-jest: 29.1.1
     ts-mockito: 2.6.1
-    typescript: 5.3.2
+    typescript: 5.3.3
     yargs: 17.7.2
   languageName: unknown
   linkType: soft
@@ -5353,23 +5362,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.3.2":
-  version: 5.3.2
-  resolution: "typescript@npm:5.3.2"
+"typescript@npm:5.3.3":
+  version: 5.3.3
+  resolution: "typescript@npm:5.3.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: d92534dda639eb825db013203404c1fabca8ac630564283c9e7dc9e64fd9c9346c2de95ecebdf3e6e8c1c32941bca1cfe0da37877611feb9daf8feeaea58d230
+  checksum: 2007ccb6e51bbbf6fde0a78099efe04dc1c3dfbdff04ca3b6a8bc717991862b39fd6126c0c3ebf2d2d98ac5e960bcaa873826bb2bb241f14277034148f41f6a2
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@5.3.2#~builtin<compat/typescript>":
-  version: 5.3.2
-  resolution: "typescript@patch:typescript@npm%3A5.3.2#~builtin<compat/typescript>::version=5.3.2&hash=e012d7"
+"typescript@patch:typescript@5.3.3#~builtin<compat/typescript>":
+  version: 5.3.3
+  resolution: "typescript@patch:typescript@npm%3A5.3.3#~builtin<compat/typescript>::version=5.3.3&hash=e012d7"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 47b2e63418ea7ef7dd0bf359ee41c6fca852c680826089269c5d03673ead471e052b172561f377f9e51212054e5f0fe19dd58085ff7db7b168449a6af704c784
+  checksum: 4e604a9e107ce0c23b16a2f8d79d0531d4d8fe9ebbb7a8c395c66998c39892f0e0a071ef0b0d4e66420a8ec2b8d6cfd9cdb29ba24f25b37cba072e9282376df9
   languageName: node
   linkType: hard
 
