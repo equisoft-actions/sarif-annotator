@@ -22,7 +22,8 @@
   "dependencies": {
     "@actions/core": "1.10.1",
     "@actions/github": "6.0.0",
-    "@actions/io": "1.1.3"
+    "@actions/io": "1.1.3",
+    "@types/sarif": "2.1.7"
   },
   "devDependencies": {
     "@equisoft/eslint-config-typescript": "3.0.3",
@@ -30,7 +31,6 @@
     "@microsoft/eslint-formatter-sarif": "3.0.0",
     "@types/jest": "29.5.11",
     "@types/node": "20.11.5",
-    "@types/sarif": "2.1.7",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
     "@vercel/ncc": "0.38.1",
@@ -46,5 +46,5 @@
     "typescript": "5.3.3",
     "yargs": "17.7.2"
   },
-  "packageManager": "yarn@3.7.0"
+  "packageManager": "yarn@4.0.2"
 }
