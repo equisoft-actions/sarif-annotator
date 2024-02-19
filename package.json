@@ -26,11 +26,11 @@
     "@types/sarif": "2.1.7"
   },
   "devDependencies": {
-    "@equisoft/eslint-config-typescript": "3.0.3",
+    "@equisoft/eslint-config-typescript": "3.0.5",
     "@equisoft/typescript-config": "2.0.0",
     "@microsoft/eslint-formatter-sarif": "3.0.0",
     "@types/jest": "29.5.12",
-    "@types/node": "20.11.17",
+    "@types/node": "20.11.19",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
     "@vercel/ncc": "0.38.1",
