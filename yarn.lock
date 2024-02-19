@@ -454,29 +454,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@equisoft/eslint-config-typescript@npm:3.0.3":
-  version: 3.0.3
-  resolution: "@equisoft/eslint-config-typescript@npm:3.0.3"
+"@equisoft/eslint-config-typescript@npm:3.0.5":
+  version: 3.0.5
+  resolution: "@equisoft/eslint-config-typescript@npm:3.0.5"
   dependencies:
-    "@equisoft/eslint-config": "npm:3.0.3"
+    "@equisoft/eslint-config": "npm:3.0.5"
   peerDependencies:
     "@microsoft/eslint-formatter-sarif": ^3
-    "@typescript-eslint/eslint-plugin": ^5
-    "@typescript-eslint/parser": ^5
+    "@typescript-eslint/eslint-plugin": ^5 || ^6.0.0
+    "@typescript-eslint/parser": ^5 || ^6.0.0
     eslint: ^8
     eslint-import-resolver-node: ^0.3
-    eslint-import-resolver-typescript: ^2
+    eslint-import-resolver-typescript: ^3
     eslint-plugin-import: ^2
     yargs: ^17
   bin:
     eslint: eslint.js
-  checksum: 10c0/57d4cfe37e588a8d5c27188ed22cb5e52df767dd8f9a26f0249a62b0c7f896b30499d984c7414fa6e4fb67dba68f2ae54c5f1f234c38f002ad86aba607a74fa0
+  checksum: 10c0/d6261041219e6ffb144886f5006bf8b0b7f74966e9c68f2460ef127ab3ae677e8832ba4a222f9542799b361c4623482c08b8cf5ca4997f1b130a043c2e90c847
   languageName: node
   linkType: hard
 
-"@equisoft/eslint-config@npm:3.0.3":
-  version: 3.0.3
-  resolution: "@equisoft/eslint-config@npm:3.0.3"
+"@equisoft/eslint-config@npm:3.0.5":
+  version: 3.0.5
+  resolution: "@equisoft/eslint-config@npm:3.0.5"
   dependencies:
     eslint-config-airbnb-base: "npm:^15.0.0"
   peerDependencies:
@@ -487,7 +487,7 @@ __metadata:
     yargs: ^17
   bin:
     eslint: eslint.js
-  checksum: 10c0/1b74f3c75173687a13651c7d70c91ea9496b44f53bb01c90cb31cb7123a2de0239a0a11c3e8ef4edfd0654d6f83605f3dd8b001fb3146f6822c527fc9dc784cd
+  checksum: 10c0/fd826645bb88e85697207ac1d8f479124204e72f87c9ef6dad8ca340cd55d7e43914b7b7253d14235819866f6a83310f20d70e150314407b4972f053d54a1d32
   languageName: node
   linkType: hard
 
@@ -1174,12 +1174,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:20.11.17":
+"@types/node@npm:*":
   version: 20.11.17
   resolution: "@types/node@npm:20.11.17"
   dependencies:
     undici-types: "npm:~5.26.4"
   checksum: 10c0/1f30dae80b416cbf38f133a619ffb0e9fb9e7bc58f82d900bf73816ae5781740c4640892bf5971dd9c12570d5d05241646be3e7540bb4e059322ec6af4e51e15
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:20.11.19":
+  version: 20.11.19
+  resolution: "@types/node@npm:20.11.19"
+  dependencies:
+    undici-types: "npm:~5.26.4"
+  checksum: 10c0/f451ef0a1d78f29c57bad7b77e49ebec945f2a6d0d7a89851d7e185ee9fe7ad94d651c0dfbcb7858c9fa791310c8b40a881e2260f56bd3c1b7e7ae92723373ae
   languageName: node
   linkType: hard
 
@@ -4842,11 +4851,11 @@ __metadata:
     "@actions/core": "npm:1.10.1"
     "@actions/github": "npm:6.0.0"
     "@actions/io": "npm:1.1.3"
-    "@equisoft/eslint-config-typescript": "npm:3.0.3"
+    "@equisoft/eslint-config-typescript": "npm:3.0.5"
     "@equisoft/typescript-config": "npm:2.0.0"
     "@microsoft/eslint-formatter-sarif": "npm:3.0.0"
     "@types/jest": "npm:29.5.12"
-    "@types/node": "npm:20.11.17"
+    "@types/node": "npm:20.11.19"
     "@types/sarif": "npm:2.1.7"
     "@typescript-eslint/eslint-plugin": "npm:5.62.0"
     "@typescript-eslint/parser": "npm:5.62.0"
