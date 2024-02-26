@@ -454,15 +454,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@equisoft/eslint-config-typescript@npm:3.0.5":
-  version: 3.0.5
-  resolution: "@equisoft/eslint-config-typescript@npm:3.0.5"
+"@equisoft/eslint-config-typescript@npm:3.0.6":
+  version: 3.0.6
+  resolution: "@equisoft/eslint-config-typescript@npm:3.0.6"
   dependencies:
-    "@equisoft/eslint-config": "npm:3.0.5"
+    "@equisoft/eslint-config": "npm:3.0.6"
   peerDependencies:
     "@microsoft/eslint-formatter-sarif": ^3
-    "@typescript-eslint/eslint-plugin": ^5 || ^6.0.0
-    "@typescript-eslint/parser": ^5 || ^6.0.0
+    "@typescript-eslint/eslint-plugin": ^7.0.0
+    "@typescript-eslint/parser": ^7.0.0
     eslint: ^8
     eslint-import-resolver-node: ^0.3
     eslint-import-resolver-typescript: ^3
@@ -470,13 +470,13 @@ __metadata:
     yargs: ^17
   bin:
     eslint: eslint.js
-  checksum: 10c0/d6261041219e6ffb144886f5006bf8b0b7f74966e9c68f2460ef127ab3ae677e8832ba4a222f9542799b361c4623482c08b8cf5ca4997f1b130a043c2e90c847
+  checksum: 10c0/5d48dab7df2f30461f9fc8f2d6bf04d86dd508f665a216c8eacffc596d0ad094b2acd912fc75554512380291197a7088ed78ceb5124cfc99137231bbb344430d
   languageName: node
   linkType: hard
 
-"@equisoft/eslint-config@npm:3.0.5":
-  version: 3.0.5
-  resolution: "@equisoft/eslint-config@npm:3.0.5"
+"@equisoft/eslint-config@npm:3.0.6":
+  version: 3.0.6
+  resolution: "@equisoft/eslint-config@npm:3.0.6"
   dependencies:
     eslint-config-airbnb-base: "npm:^15.0.0"
   peerDependencies:
@@ -487,7 +487,7 @@ __metadata:
     yargs: ^17
   bin:
     eslint: eslint.js
-  checksum: 10c0/fd826645bb88e85697207ac1d8f479124204e72f87c9ef6dad8ca340cd55d7e43914b7b7253d14235819866f6a83310f20d70e150314407b4972f053d54a1d32
+  checksum: 10c0/788cce0d52f8e1cfdc77a0a79402a6e00c0d5676ce0343ad91c7e3f375ec6b9713d10bcd1e18001205d98987547660c2edc910a273e627934b68c7dfa64719c7
   languageName: node
   linkType: hard
 
@@ -540,6 +540,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@eslint/js@npm:8.57.0":
+  version: 8.57.0
+  resolution: "@eslint/js@npm:8.57.0"
+  checksum: 10c0/9a518bb8625ba3350613903a6d8c622352ab0c6557a59fe6ff6178bf882bf57123f9d92aa826ee8ac3ee74b9c6203fe630e9ee00efb03d753962dcf65ee4bd94
+  languageName: node
+  linkType: hard
+
 "@fastify/busboy@npm:^2.0.0":
   version: 2.1.0
   resolution: "@fastify/busboy@npm:2.1.0"
@@ -547,7 +554,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@humanwhocodes/config-array@npm:^0.11.13":
+"@humanwhocodes/config-array@npm:^0.11.13, @humanwhocodes/config-array@npm:^0.11.14":
   version: 0.11.14
   resolution: "@humanwhocodes/config-array@npm:0.11.14"
   dependencies:
@@ -1174,12 +1181,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:20.11.19":
+"@types/node@npm:*":
   version: 20.11.19
   resolution: "@types/node@npm:20.11.19"
   dependencies:
     undici-types: "npm:~5.26.4"
   checksum: 10c0/f451ef0a1d78f29c57bad7b77e49ebec945f2a6d0d7a89851d7e185ee9fe7ad94d651c0dfbcb7858c9fa791310c8b40a881e2260f56bd3c1b7e7ae92723373ae
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:20.11.20":
+  version: 20.11.20
+  resolution: "@types/node@npm:20.11.20"
+  dependencies:
+    undici-types: "npm:~5.26.4"
+  checksum: 10c0/8e8de211e6d54425c603388a9b5cc9c434101985d0a1c88aabbf65d10df2b1fccd71855c20e61ae8a75c7aea56cb0f64e722cf7914cff1247d0b62ce21996ac4
   languageName: node
   linkType: hard
 
@@ -2414,7 +2430,55 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:8.56.0, eslint@npm:^8.9.0":
+"eslint@npm:8.57.0":
+  version: 8.57.0
+  resolution: "eslint@npm:8.57.0"
+  dependencies:
+    "@eslint-community/eslint-utils": "npm:^4.2.0"
+    "@eslint-community/regexpp": "npm:^4.6.1"
+    "@eslint/eslintrc": "npm:^2.1.4"
+    "@eslint/js": "npm:8.57.0"
+    "@humanwhocodes/config-array": "npm:^0.11.14"
+    "@humanwhocodes/module-importer": "npm:^1.0.1"
+    "@nodelib/fs.walk": "npm:^1.2.8"
+    "@ungap/structured-clone": "npm:^1.2.0"
+    ajv: "npm:^6.12.4"
+    chalk: "npm:^4.0.0"
+    cross-spawn: "npm:^7.0.2"
+    debug: "npm:^4.3.2"
+    doctrine: "npm:^3.0.0"
+    escape-string-regexp: "npm:^4.0.0"
+    eslint-scope: "npm:^7.2.2"
+    eslint-visitor-keys: "npm:^3.4.3"
+    espree: "npm:^9.6.1"
+    esquery: "npm:^1.4.2"
+    esutils: "npm:^2.0.2"
+    fast-deep-equal: "npm:^3.1.3"
+    file-entry-cache: "npm:^6.0.1"
+    find-up: "npm:^5.0.0"
+    glob-parent: "npm:^6.0.2"
+    globals: "npm:^13.19.0"
+    graphemer: "npm:^1.4.0"
+    ignore: "npm:^5.2.0"
+    imurmurhash: "npm:^0.1.4"
+    is-glob: "npm:^4.0.0"
+    is-path-inside: "npm:^3.0.3"
+    js-yaml: "npm:^4.1.0"
+    json-stable-stringify-without-jsonify: "npm:^1.0.1"
+    levn: "npm:^0.4.1"
+    lodash.merge: "npm:^4.6.2"
+    minimatch: "npm:^3.1.2"
+    natural-compare: "npm:^1.4.0"
+    optionator: "npm:^0.9.3"
+    strip-ansi: "npm:^6.0.1"
+    text-table: "npm:^0.2.0"
+  bin:
+    eslint: bin/eslint.js
+  checksum: 10c0/00bb96fd2471039a312435a6776fe1fd557c056755eaa2b96093ef3a8508c92c8775d5f754768be6b1dddd09fdd3379ddb231eeb9b6c579ee17ea7d68000a529
+  languageName: node
+  linkType: hard
+
+"eslint@npm:^8.9.0":
   version: 8.56.0
   resolution: "eslint@npm:8.56.0"
   dependencies:
@@ -4853,16 +4917,16 @@ __metadata:
     "@actions/core": "npm:1.10.1"
     "@actions/github": "npm:6.0.0"
     "@actions/io": "npm:1.1.3"
-    "@equisoft/eslint-config-typescript": "npm:3.0.5"
+    "@equisoft/eslint-config-typescript": "npm:3.0.6"
     "@equisoft/typescript-config": "npm:2.0.0"
     "@microsoft/eslint-formatter-sarif": "npm:3.0.0"
     "@types/jest": "npm:29.5.12"
-    "@types/node": "npm:20.11.19"
+    "@types/node": "npm:20.11.20"
     "@types/sarif": "npm:2.1.7"
     "@typescript-eslint/eslint-plugin": "npm:5.62.0"
     "@typescript-eslint/parser": "npm:5.62.0"
     "@vercel/ncc": "npm:0.38.1"
-    eslint: "npm:8.56.0"
+    eslint: "npm:8.57.0"
     eslint-import-resolver-node: "npm:0.3.9"
     eslint-import-resolver-typescript: "npm:3.6.1"
     eslint-plugin-import: "npm:2.29.1"
