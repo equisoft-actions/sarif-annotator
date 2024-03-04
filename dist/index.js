@@ -10015,7 +10015,7 @@ module.exports = Dispatcher
 "use strict";
 
 
-const Busboy = __nccwpck_require__(3382)
+const Busboy = __nccwpck_require__(9561)
 const util = __nccwpck_require__(8202)
 const {
   ReadableStreamFrom,
@@ -25194,7 +25194,7 @@ module.exports = require("zlib");
 
 /***/ }),
 
-/***/ 1308:
+/***/ 8370:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -25203,10 +25203,10 @@ module.exports = require("zlib");
 const WritableStream = (__nccwpck_require__(4492).Writable)
 const inherits = (__nccwpck_require__(7261).inherits)
 
-const StreamSearch = __nccwpck_require__(3886)
+const StreamSearch = __nccwpck_require__(931)
 
-const PartStream = __nccwpck_require__(5936)
-const HeaderParser = __nccwpck_require__(8040)
+const PartStream = __nccwpck_require__(7563)
+const HeaderParser = __nccwpck_require__(3478)
 
 const DASH = 45
 const B_ONEDASH = Buffer.from('-')
@@ -25278,7 +25278,7 @@ Dicer.prototype._write = function (data, encoding, cb) {
   if (this._headerFirst && this._isPreamble) {
     if (!this._part) {
       this._part = new PartStream(this._partOpts)
-      if (this._events.preamble) { this.emit('preamble', this._part) } else { this._ignore() }
+      if (this.listenerCount('preamble') !== 0) { this.emit('preamble', this._part) } else { this._ignore() }
     }
     const r = this._hparser.push(data)
     if (!this._inHeader && r !== undefined && r < data.length) { data = data.slice(r) } else { return cb() }
@@ -25335,7 +25335,7 @@ Dicer.prototype._oninfo = function (isMatch, data, start, end) {
       }
     }
     if (this._dashes === 2) {
-      if ((start + i) < end && this._events.trailer) { this.emit('trailer', data.slice(start + i, end)) }
+      if ((start + i) < end && this.listenerCount('trailer') !== 0) { this.emit('trailer', data.slice(start + i, end)) }
       this.reset()
       this._finished = true
       // no more parts will be added
@@ -25353,7 +25353,13 @@ Dicer.prototype._oninfo = function (isMatch, data, start, end) {
     this._part._read = function (n) {
       self._unpause()
     }
-    if (this._isPreamble && this._events.preamble) { this.emit('preamble', this._part) } else if (this._isPreamble !== true && this._events.part) { this.emit('part', this._part) } else { this._ignore() }
+    if (this._isPreamble && this.listenerCount('preamble') !== 0) {
+      this.emit('preamble', this._part)
+    } else if (this._isPreamble !== true && this.listenerCount('part') !== 0) {
+      this.emit('part', this._part)
+    } else {
+      this._ignore()
+    }
     if (!this._isPreamble) { this._inHeader = true }
   }
   if (data && start < end && !this._ignoreData) {
@@ -25409,7 +25415,7 @@ module.exports = Dicer
 
 /***/ }),
 
-/***/ 8040:
+/***/ 3478:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -25417,9 +25423,9 @@ module.exports = Dicer
 
 const EventEmitter = (__nccwpck_require__(5673).EventEmitter)
 const inherits = (__nccwpck_require__(7261).inherits)
-const getLimit = __nccwpck_require__(3386)
+const getLimit = __nccwpck_require__(4969)
 
-const StreamSearch = __nccwpck_require__(3886)
+const StreamSearch = __nccwpck_require__(931)
 
 const B_DCRLF = Buffer.from('\r\n\r\n')
 const RE_CRLF = /\r\n/g
@@ -25517,7 +25523,7 @@ module.exports = HeaderParser
 
 /***/ }),
 
-/***/ 5936:
+/***/ 7563:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -25538,7 +25544,7 @@ module.exports = PartStream
 
 /***/ }),
 
-/***/ 3886:
+/***/ 931:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -25774,7 +25780,7 @@ module.exports = SBMH
 
 /***/ }),
 
-/***/ 3382:
+/***/ 9561:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -25782,11 +25788,11 @@ module.exports = SBMH
 
 const WritableStream = (__nccwpck_require__(4492).Writable)
 const { inherits } = __nccwpck_require__(7261)
-const Dicer = __nccwpck_require__(1308)
+const Dicer = __nccwpck_require__(8370)
 
-const MultipartParser = __nccwpck_require__(3854)
-const UrlencodedParser = __nccwpck_require__(6338)
-const parseParams = __nccwpck_require__(3390)
+const MultipartParser = __nccwpck_require__(1762)
+const UrlencodedParser = __nccwpck_require__(4335)
+const parseParams = __nccwpck_require__(7803)
 
 function Busboy (opts) {
   if (!(this instanceof Busboy)) { return new Busboy(opts) }
@@ -25867,7 +25873,7 @@ module.exports.Dicer = Dicer
 
 /***/ }),
 
-/***/ 3854:
+/***/ 1762:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -25883,12 +25889,12 @@ module.exports.Dicer = Dicer
 const { Readable } = __nccwpck_require__(4492)
 const { inherits } = __nccwpck_require__(7261)
 
-const Dicer = __nccwpck_require__(1308)
+const Dicer = __nccwpck_require__(8370)
 
-const parseParams = __nccwpck_require__(3390)
-const decodeText = __nccwpck_require__(3959)
-const basename = __nccwpck_require__(260)
-const getLimit = __nccwpck_require__(3386)
+const parseParams = __nccwpck_require__(7803)
+const decodeText = __nccwpck_require__(5216)
+const basename = __nccwpck_require__(2346)
+const getLimit = __nccwpck_require__(4969)
 
 const RE_BOUNDARY = /^boundary$/i
 const RE_FIELD = /^form-data$/i
@@ -26036,7 +26042,7 @@ function Multipart (boy, cfg) {
 
         ++nfiles
 
-        if (!boy._events.file) {
+        if (boy.listenerCount('file') === 0) {
           self.parser._ignore()
           return
         }
@@ -26181,15 +26187,15 @@ module.exports = Multipart
 
 /***/ }),
 
-/***/ 6338:
+/***/ 4335:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const Decoder = __nccwpck_require__(2553)
-const decodeText = __nccwpck_require__(3959)
-const getLimit = __nccwpck_require__(3386)
+const Decoder = __nccwpck_require__(2294)
+const decodeText = __nccwpck_require__(5216)
+const getLimit = __nccwpck_require__(4969)
 
 const RE_CHARSET = /^charset$/i
 
@@ -26379,7 +26385,7 @@ module.exports = UrlEncoded
 
 /***/ }),
 
-/***/ 2553:
+/***/ 2294:
 /***/ ((module) => {
 
 "use strict";
@@ -26441,7 +26447,7 @@ module.exports = Decoder
 
 /***/ }),
 
-/***/ 260:
+/***/ 2346:
 /***/ ((module) => {
 
 "use strict";
@@ -26463,7 +26469,7 @@ module.exports = function basename (path) {
 
 /***/ }),
 
-/***/ 3959:
+/***/ 5216:
 /***/ (function(module) {
 
 "use strict";
@@ -26565,7 +26571,7 @@ const decoders = {
     if (textDecoders.has(this.toString())) {
       try {
         return textDecoders.get(this).decode(data)
-      } catch (e) { }
+      } catch {}
     }
     return typeof data === 'string'
       ? data
@@ -26585,7 +26591,7 @@ module.exports = decodeText
 
 /***/ }),
 
-/***/ 3386:
+/***/ 4969:
 /***/ ((module) => {
 
 "use strict";
@@ -26609,14 +26615,14 @@ module.exports = function getLimit (limits, name, defaultLimit) {
 
 /***/ }),
 
-/***/ 3390:
+/***/ 7803:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 /* eslint-disable object-property-newline */
 
 
-const decodeText = __nccwpck_require__(3959)
+const decodeText = __nccwpck_require__(5216)
 
 const RE_ENCODED = /%[a-fA-F0-9][a-fA-F0-9]/g
 
