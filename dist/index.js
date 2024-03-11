@@ -524,8 +524,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.OidcClient = void 0;
-const http_client_1 = __nccwpck_require__(9617);
-const auth_1 = __nccwpck_require__(3812);
+const http_client_1 = __nccwpck_require__(2201);
+const auth_1 = __nccwpck_require__(3708);
 const core_1 = __nccwpck_require__(2340);
 class OidcClient {
     static createHttpClient(allowRetry = true, maxRetry = 10) {
@@ -994,7 +994,7 @@ exports.toCommandProperties = toCommandProperties;
 
 /***/ }),
 
-/***/ 3812:
+/***/ 3708:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -1082,7 +1082,7 @@ exports.PersonalAccessTokenCredentialHandler = PersonalAccessTokenCredentialHand
 
 /***/ }),
 
-/***/ 9617:
+/***/ 2201:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -1124,7 +1124,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.HttpClient = exports.isHttps = exports.HttpClientResponse = exports.HttpClientError = exports.getProxyUrl = exports.MediaTypes = exports.Headers = exports.HttpCodes = void 0;
 const http = __importStar(__nccwpck_require__(3685));
 const https = __importStar(__nccwpck_require__(5687));
-const pm = __importStar(__nccwpck_require__(246));
+const pm = __importStar(__nccwpck_require__(1800));
 const tunnel = __importStar(__nccwpck_require__(777));
 const undici_1 = __nccwpck_require__(3086);
 var HttpCodes;
@@ -1590,7 +1590,7 @@ class HttpClient {
         if (this._keepAlive && useProxy) {
             agent = this._proxyAgent;
         }
-        if (this._keepAlive && !useProxy) {
+        if (!useProxy) {
             agent = this._agent;
         }
         // if agent is already assigned use that agent.
@@ -1622,15 +1622,11 @@ class HttpClient {
             agent = tunnelAgent(agentOptions);
             this._proxyAgent = agent;
         }
-        // if reusing agent across request and tunneling agent isn't assigned create a new agent
-        if (this._keepAlive && !agent) {
+        // if tunneling agent isn't assigned create a new agent
+        if (!agent) {
             const options = { keepAlive: this._keepAlive, maxSockets };
             agent = usingSsl ? new https.Agent(options) : new http.Agent(options);
             this._agent = agent;
-        }
-        // if not using private agent and tunnel agent isn't setup then use global agent
-        if (!agent) {
-            agent = usingSsl ? https.globalAgent : http.globalAgent;
         }
         if (usingSsl && this._ignoreSslError) {
             // we don't want to set NODE_TLS_REJECT_UNAUTHORIZED=0 since that will affect request for entire process
@@ -1745,7 +1741,7 @@ const lowercaseKeys = (obj) => Object.keys(obj).reduce((c, k) => ((c[k.toLowerCa
 
 /***/ }),
 
-/***/ 246:
+/***/ 1800:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
