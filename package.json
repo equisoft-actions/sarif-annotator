@@ -30,9 +30,9 @@
     "@equisoft/typescript-config": "2.0.0",
     "@microsoft/eslint-formatter-sarif": "3.1.0",
     "@types/jest": "29.5.12",
-    "@types/node": "20.12.7",
-    "@typescript-eslint/eslint-plugin": "7.7.1",
-    "@typescript-eslint/parser": "7.7.1",
+    "@types/node": "20.12.8",
+    "@typescript-eslint/eslint-plugin": "7.8.0",
+    "@typescript-eslint/parser": "7.8.0",
     "@vercel/ncc": "0.38.1",
     "eslint": "8.57.0",
     "eslint-import-resolver-node": "0.3.9",
@@ -46,5 +46,5 @@
     "typescript": "5.4.5",
     "yargs": "17.7.2"
   },
-  "packageManager": "yarn@4.1.1"
+  "packageManager": "yarn@4.2.1"
 }
