@@ -24922,7 +24922,7 @@ exports["default"] = _default;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.runAction = void 0;
+exports.runAction = runAction;
 const report_filters_1 = __nccwpck_require__(3602);
 const report_reader_1 = __nccwpck_require__(5599);
 function filterReport(report, inputs) {
@@ -24938,7 +24938,6 @@ function runAction(inputs, converter, annotator) {
     });
     reports.forEach((report) => annotator.annotate(report));
 }
-exports.runAction = runAction;
 
 
 /***/ }),
@@ -25131,14 +25130,14 @@ exports.ORDERED_LEVELS_ASC = ['notice', 'warning', 'error'];
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.filterReportByIssueLimit = exports.filterReportByIssueLevel = void 0;
+exports.filterReportByIssueLevel = filterReportByIssueLevel;
+exports.filterReportByIssueLimit = filterReportByIssueLimit;
 const issue_1 = __nccwpck_require__(6052);
 function filterReportByIssueLevel(level, report) {
     const desiredLevels = issue_1.ORDERED_LEVELS_ASC.slice(issue_1.ORDERED_LEVELS_ASC.indexOf(level));
     const issues = report.issues.filter((issue) => desiredLevels.indexOf(issue.level) !== 0);
     return Object.assign(Object.assign({}, report), { issues });
 }
-exports.filterReportByIssueLevel = filterReportByIssueLevel;
 function filterReportByIssueLimit(limit, report) {
     let issues = report.issues;
     if (limit > 0) {
@@ -25146,7 +25145,6 @@ function filterReportByIssueLimit(limit, report) {
     }
     return Object.assign(Object.assign({}, report), { issues });
 }
-exports.filterReportByIssueLimit = filterReportByIssueLimit;
 
 
 /***/ }),
@@ -25160,7 +25158,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.readSarifLog = void 0;
+exports.readSarifLog = readSarifLog;
 const core_1 = __nccwpck_require__(2340);
 const fs_1 = __importDefault(__nccwpck_require__(7147));
 function readSarifLog(path) {
@@ -25168,7 +25166,6 @@ function readSarifLog(path) {
     (0, core_1.info)(`Reading input file ${path}`);
     return JSON.parse(buffer.toString());
 }
-exports.readSarifLog = readSarifLog;
 
 
 /***/ }),
