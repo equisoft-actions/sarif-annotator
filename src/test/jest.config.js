@@ -15,17 +15,8 @@ const config = {
     moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths || [], { prefix: '<rootDir>/src/test' }),
     reporters: [
         'default',
-        [
-            'jest-junit',
-            {
-                outputDirectory: 'build/jest/',
-                outputName: 'junit.xml',
-                suiteNameTemplate: '{filepath}',
-                classNameTemplate: '{classname}',
-                titleTemplate: '{title}',
-            },
-        ],
-    ],
+        process.env.CI === 'true' && 'github-actions',
+    ].filter(Boolean),
     resetMocks: true,
     rootDir: '../../',
     roots: [
