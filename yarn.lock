@@ -460,11 +460,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@equisoft/eslint-config-typescript@npm:4.0.0":
-  version: 4.0.0
-  resolution: "@equisoft/eslint-config-typescript@npm:4.0.0"
+"@equisoft/eslint-config-typescript@npm:4.0.1":
+  version: 4.0.1
+  resolution: "@equisoft/eslint-config-typescript@npm:4.0.1"
   dependencies:
-    "@equisoft/eslint-config": "npm:4.0.0"
+    "@equisoft/eslint-config": "npm:4.0.1"
   peerDependencies:
     "@microsoft/eslint-formatter-sarif": ^3
     "@typescript-eslint/eslint-plugin": ^7.0.0 || ^8.0.0
@@ -476,13 +476,13 @@ __metadata:
     yargs: ^17
   bin:
     eq-eslint: eslint.js
-  checksum: 10c0/144d7b5dfb4ab82302d2c524b2897e5a6803d1fc054048448a142ce11b47b164efcc3a7ea82b385a9a12d7b0393d8a356f333b957dbd3080f6f1914c509c1308
+  checksum: 10c0/054d693737bf82a8ce9c14cd11cca25d1a40f2e1d5b1586113ced7a17a1f014d74952d9d9b4cc2b8712089563397e3bb778309fb7efd0655e911431ab3de1a53
   languageName: node
   linkType: hard
 
-"@equisoft/eslint-config@npm:4.0.0":
-  version: 4.0.0
-  resolution: "@equisoft/eslint-config@npm:4.0.0"
+"@equisoft/eslint-config@npm:4.0.1":
+  version: 4.0.1
+  resolution: "@equisoft/eslint-config@npm:4.0.1"
   dependencies:
     eslint-config-airbnb-base: "npm:^15.0.0"
   peerDependencies:
@@ -493,7 +493,7 @@ __metadata:
     yargs: ^17
   bin:
     eq-eslint: eslint.js
-  checksum: 10c0/629fb8e4d8dbf75385b8e65677dff1656751a99e54af2bfd94c6e6dfcab47fce68b4ca11de4e818b3c7671e73c9d3855877ba54a458b77fa839e5703250168aa
+  checksum: 10c0/d8110ea14e5048d68127cf7b5b84142ce8ef5efcf10b4b89223f70f7b8b61a8888c689f50244c996e6894dcea9f35786edd1c937d521b3969b3d04826b8cdfed
   languageName: node
   linkType: hard
 
@@ -1225,12 +1225,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:22.14.0":
+"@types/node@npm:*":
   version: 22.14.0
   resolution: "@types/node@npm:22.14.0"
   dependencies:
     undici-types: "npm:~6.21.0"
   checksum: 10c0/9d79f3fa1af9c2c869514f419c4a4905b34c10e12915582fd1784868ac4e74c6d306cf5eb47ef889b6750ab85a31be96618227b86739c4a3e0b1c15063f384c6
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:22.14.1":
+  version: 22.14.1
+  resolution: "@types/node@npm:22.14.1"
+  dependencies:
+    undici-types: "npm:~6.21.0"
+  checksum: 10c0/d49c4d00403b1c2348cf0701b505fd636d80aabe18102105998dc62fdd36dcaf911e73c7a868c48c21c1022b825c67b475b65b1222d84b704d8244d152bb7f86
   languageName: node
   linkType: hard
 
@@ -5178,11 +5187,11 @@ __metadata:
     "@actions/core": "npm:1.11.1"
     "@actions/github": "npm:6.0.0"
     "@actions/io": "npm:1.1.3"
-    "@equisoft/eslint-config-typescript": "npm:4.0.0"
+    "@equisoft/eslint-config-typescript": "npm:4.0.1"
     "@equisoft/typescript-config": "npm:2.0.0"
     "@microsoft/eslint-formatter-sarif": "npm:3.1.0"
     "@types/jest": "npm:29.5.14"
-    "@types/node": "npm:22.14.0"
+    "@types/node": "npm:22.14.1"
     "@types/sarif": "npm:2.1.7"
     "@typescript-eslint/eslint-plugin": "npm:7.18.0"
     "@typescript-eslint/parser": "npm:7.18.0"
@@ -5194,7 +5203,7 @@ __metadata:
     jest: "npm:29.7.0"
     jest-extended: "npm:4.0.2"
     jest-junit: "npm:16.0.0"
-    ts-jest: "npm:29.3.1"
+    ts-jest: "npm:29.3.2"
     ts-mockito: "npm:2.6.1"
     typescript: "npm:5.8.3"
     yargs: "npm:17.7.2"
@@ -5640,9 +5649,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-jest@npm:29.3.1":
-  version: 29.3.1
-  resolution: "ts-jest@npm:29.3.1"
+"ts-jest@npm:29.3.2":
+  version: 29.3.2
+  resolution: "ts-jest@npm:29.3.2"
   dependencies:
     bs-logger: "npm:^0.2.6"
     ejs: "npm:^3.1.10"
@@ -5652,7 +5661,7 @@ __metadata:
     lodash.memoize: "npm:^4.1.2"
     make-error: "npm:^1.3.6"
     semver: "npm:^7.7.1"
-    type-fest: "npm:^4.38.0"
+    type-fest: "npm:^4.39.1"
     yargs-parser: "npm:^21.1.1"
   peerDependencies:
     "@babel/core": ">=7.0.0-beta.0 <8"
@@ -5674,7 +5683,7 @@ __metadata:
       optional: true
   bin:
     ts-jest: cli.js
-  checksum: 10c0/5df9239223b974fc61bbe018d4e72bbdbea530c4b624fab0936a152438a58e97ce0d0cee2258d10e7ecebbf0ab699ab41d0a52fc5b5f13201cdac4419ab0fe04
+  checksum: 10c0/84762720dbef45c1644348d67d0dcb8b7ad6369a16628c4752aceeb47f0ccdad63ae14485048b641c20ce096337a160ab816881361ef5517325bac6a5b3756e0
   languageName: node
   linkType: hard
 
@@ -5743,7 +5752,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type-fest@npm:^4.38.0":
+"type-fest@npm:^4.39.1":
   version: 4.39.1
   resolution: "type-fest@npm:4.39.1"
   checksum: 10c0/f5bf302eb2e2f70658be1757aa578f4a09da3f65699b0b12b7ae5502ccea76e5124521a6e6b69540f442c3dc924c394202a2ab58718d0582725c7ac23c072594
