@@ -26,7 +26,7 @@
     "@types/sarif": "2.1.7"
   },
   "devDependencies": {
-    "@equisoft/eslint-config-typescript": "4.0.1",
+    "@equisoft/eslint-config-typescript": "4.0.2",
     "@equisoft/typescript-config": "2.0.0",
     "@microsoft/eslint-formatter-sarif": "3.1.0",
     "@types/jest": "29.5.14",
