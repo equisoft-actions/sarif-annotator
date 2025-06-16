@@ -4131,7 +4131,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-util@npm:^29.7.0":
+"jest-util@npm:29.7.0, jest-util@npm:^29.7.0":
   version: 29.7.0
   resolution: "jest-util@npm:29.7.0"
   dependencies:
@@ -5259,6 +5259,7 @@ __metadata:
     jest: "npm:29.7.0"
     jest-extended: "npm:6.0.0"
     jest-junit: "npm:16.0.0"
+    jest-util: "npm:29.7.0"
     ts-jest: "npm:29.4.0"
     ts-mockito: "npm:2.6.1"
     typescript: "npm:5.8.3"
