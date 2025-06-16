@@ -7,7 +7,7 @@ describe('Report reader', () => {
     it('should fail when trying to read a non-existent file', () => {
         expect(() => {
             readSarifLog('whoami');
-        }).toThrowError();
+        }).toThrow();
     });
 
     it('should read an existing file', () => {
