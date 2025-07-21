@@ -1286,12 +1286,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:22.16.3":
-  version: 22.16.3
-  resolution: "@types/node@npm:22.16.3"
+"@types/node@npm:22.16.5":
+  version: 22.16.5
+  resolution: "@types/node@npm:22.16.5"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10c0/ea6829d0691713e216c15a767f87e412fa0f45c7ed4d49419098d967467e20a5dcdf66fee024e314deab2779f7e5282e1839ee918e845be27f14179247ec947a
+  checksum: 10c0/93a245e96a01f4a6aa38475000070292a9299e17b95bc1fc8180c652fb3a62f9b3b9ec0b78f9fc6a78b9274d3dfce456e80c7bb68b5357c8f7dbf581df4408c1
   languageName: node
   linkType: hard
 
@@ -5303,7 +5303,7 @@ __metadata:
     "@equisoft/typescript-config": "npm:2.0.0"
     "@microsoft/eslint-formatter-sarif": "npm:3.1.0"
     "@types/jest": "npm:30.0.0"
-    "@types/node": "npm:22.16.3"
+    "@types/node": "npm:22.16.5"
     "@types/sarif": "npm:2.1.7"
     "@typescript-eslint/eslint-plugin": "npm:7.18.0"
     "@typescript-eslint/parser": "npm:7.18.0"
