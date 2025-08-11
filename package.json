@@ -30,7 +30,7 @@
     "@equisoft/typescript-config": "2.0.0",
     "@microsoft/eslint-formatter-sarif": "3.1.0",
     "@types/jest": "30.0.0",
-    "@types/node": "22.16.5",
+    "@types/node": "22.17.1",
     "@typescript-eslint/eslint-plugin": "7.18.0",
     "@typescript-eslint/parser": "7.18.0",
     "@vercel/ncc": "0.38.3",
@@ -42,9 +42,9 @@
     "jest-extended": "6.0.0",
     "jest-junit": "16.0.0",
     "jest-util": "30.0.5",
-    "ts-jest": "29.4.0",
+    "ts-jest": "29.4.1",
     "ts-mockito": "2.6.1",
-    "typescript": "5.8.3",
+    "typescript": "5.9.2",
     "yargs": "18.0.0"
   },
   "packageManager": "yarn@4.9.2"
