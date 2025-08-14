@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Setup asdf-vm
         uses: equisoft-actions/with-asdf-vm@v2
       - name: Install NPM dependencies
@@ -27,7 +27,7 @@ jobs:
       - setup
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Setup asdf-vm
         uses: equisoft-actions/with-asdf-vm@v2
       - name: Install NPM dependencies
@@ -44,7 +44,7 @@ jobs:
       - setup
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Setup asdf-vm
         uses: equisoft-actions/with-asdf-vm@v2
       - name: Install NPM dependencies
@@ -59,7 +59,7 @@ jobs:
       - setup
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Setup asdf-vm
         uses: equisoft-actions/with-asdf-vm@v2
       - name: Install NPM dependencies
@@ -85,15 +85,15 @@ jobs:
     if: ${{ failure() && needs.compile.result == 'success' && needs.eslint.result == 'failure' }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Download eslint results
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: eslint.sarif
           path: build/eslint/
       - name: Download new dist
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: dist
           path: build/dist
