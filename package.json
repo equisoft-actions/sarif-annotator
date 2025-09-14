@@ -31,7 +31,7 @@
     "@microsoft/eslint-formatter-sarif": "3.1.0",
     "@stylistic/eslint-plugin": "5.2.3",
     "@types/jest": "30.0.0",
-    "@types/node": "22.18.1",
+    "@types/node": "22.18.3",
     "@typescript-eslint/eslint-plugin": "7.18.0",
     "@typescript-eslint/parser": "7.18.0",
     "@vercel/ncc": "0.38.3",
