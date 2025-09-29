@@ -6,7 +6,7 @@
  */
 
 /* eslint-disable no-console */
-/* eslint-disable @typescript-eslint/no-var-requires -- Waiting for ES modules support in PnP https://github.com/yarnpkg/berry/issues/638 */
+/* eslint-disable @typescript-eslint/no-require-imports -- Waiting for ES modules support in PnP https://github.com/yarnpkg/berry/issues/638 */
 const { ESLint } = require('eslint');
 const fs = require('fs/promises');
 const path = require('path');
