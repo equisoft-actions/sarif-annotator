@@ -21,7 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "2.0.1",
-    "@actions/github": "6.0.1",
+    "@actions/github": "7.0.0",
     "@actions/io": "2.0.0",
     "@types/sarif": "2.1.7"
   },
