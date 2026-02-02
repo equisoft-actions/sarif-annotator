@@ -20,7 +20,7 @@
   "author": "Equisoft",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "2.0.2",
+    "@actions/core": "2.0.3",
     "@actions/github": "9.0.0",
     "@actions/io": "3.0.2",
     "@types/sarif": "2.1.7"
@@ -32,8 +32,8 @@
     "@stylistic/eslint-plugin": "5.7.1",
     "@types/jest": "30.0.0",
     "@types/node": "24.10.9",
-    "@typescript-eslint/eslint-plugin": "8.53.1",
-    "@typescript-eslint/parser": "8.53.1",
+    "@typescript-eslint/eslint-plugin": "8.54.0",
+    "@typescript-eslint/parser": "8.54.0",
     "@vercel/ncc": "0.38.4",
     "eslint": "8.57.1",
     "eslint-import-resolver-node": "0.3.9",
