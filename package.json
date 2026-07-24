@@ -45,7 +45,7 @@
     "jest-util": "30.4.1",
     "ts-jest": "29.4.11",
     "ts-mockito": "2.6.1",
-    "typescript": "5.9.3",
+    "typescript": "7.0.2",
     "yargs": "18.0.0"
   },
   "packageManager": "yarn@4.17.1"
