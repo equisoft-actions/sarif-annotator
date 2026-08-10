@@ -32,8 +32,8 @@
     "@stylistic/eslint-plugin": "5.10.0",
     "@types/jest": "30.0.0",
     "@types/node": "24.13.3",
-    "@typescript-eslint/eslint-plugin": "8.64.0",
-    "@typescript-eslint/parser": "8.64.0",
+    "@typescript-eslint/eslint-plugin": "8.66.0",
+    "@typescript-eslint/parser": "8.66.0",
     "@vercel/ncc": "0.44.1",
     "eslint": "8.57.1",
     "eslint-import-resolver-node": "0.4.0",
@@ -43,10 +43,10 @@
     "jest-extended": "7.0.0",
     "jest-junit": "17.0.0",
     "jest-util": "30.4.1",
-    "ts-jest": "29.4.11",
+    "ts-jest": "29.4.12",
     "ts-mockito": "2.6.1",
     "typescript": "5.9.3",
-    "yargs": "18.0.0"
+    "yargs": "18.1.0"
   },
-  "packageManager": "yarn@4.17.1"
+  "packageManager": "yarn@4.18.0"
 }
